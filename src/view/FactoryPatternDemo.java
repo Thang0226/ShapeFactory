@@ -5,9 +5,11 @@ import model.Shape;
 
 public class FactoryPatternDemo {
 	public static void main(String[] args) {
-		Shape s1 = ShapeFactory.getShape("Square");
-		Shape s2 = ShapeFactory.getShape("Circle");
-		Shape s3 = ShapeFactory.getShape("Rectangle");
+		ShapeFactory factory = ShapeFactory.getInstance();
+
+		Shape s1 = factory.getShape("Square");
+		Shape s2 = factory.getShape("Circle");
+		Shape s3 = factory.getShape("Rectangle");
 
 		System.out.println("Drawing of shape s1:");
 		s1.draw();
